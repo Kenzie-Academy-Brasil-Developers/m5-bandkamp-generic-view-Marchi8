@@ -37,13 +37,6 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # Application definition
-SPECTACULAR_SETTINGS = {
-    "TITLE": "bandkamp",
-    "DESCRIPTION": "O objetivo deste projeto é adequar um sistema 'legado' que inicialmente já está desenvolvido com APIView e sqlite3, fazendo a transição para Generic Views, ModelSerializer, Postgres e Deploy, além de documentar e de verificar e manter a integridade das funcionalidades já existentes.",
-    "VERSION": "1.0.0",
-    "SERVE_INCLUDE_SCHEMA": False,
-    # OTHER SETTINGS
-}
 
 DJANGO_APPS = [
     "django.contrib.admin",
@@ -157,9 +150,9 @@ SIMPLE_JWT = {
 }
 
 REST_FRAMEWORK = {
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 2,
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 # Internationalization
@@ -185,3 +178,11 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "bandkamp",
+    "DESCRIPTION": "O objetivo deste projeto é adequar um sistema 'legado' que inicialmente já está desenvolvido com APIView e sqlite3, fazendo a transição para Generic Views, ModelSerializer, Postgres e Deploy, além de documentar e de verificar e manter a integridade das funcionalidades já existentes.",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    # OTHER SETTINGS
+}

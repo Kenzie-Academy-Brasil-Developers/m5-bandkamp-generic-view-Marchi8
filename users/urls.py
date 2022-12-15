@@ -19,7 +19,7 @@ urlpatterns = [
     ),
     path(
         "docs/redoc/",
-        SpectacularRedocView.as_view(url_name="schema"),
+        SpectacularRedocView.as_view(url_name="docs"),
         name="redoc",
     ),
 ]
