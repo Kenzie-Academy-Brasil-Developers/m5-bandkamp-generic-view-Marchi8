@@ -10,14 +10,14 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("users.urls")),
     path("api/", include("albums.urls")),
-    path("docs/", SpectacularAPIView.as_view(), name="docs"),
+    path("api/docs/", SpectacularAPIView.as_view(), name="docs"),
     path(
-        "docs/swagger-ui/",
+        "api/docs/swagger-ui/",
         SpectacularSwaggerView.as_view(url_name="docs"),
         name="swagger-ui",
     ),
     path(
-        "docs/redoc/",
+        "api/docs/redoc/",
         SpectacularRedocView.as_view(url_name="docs"),
         name="redoc",
     ),
