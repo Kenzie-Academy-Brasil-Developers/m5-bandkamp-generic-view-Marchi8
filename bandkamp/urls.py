@@ -10,9 +10,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("users.urls")),
     path("api/", include("albums.urls")),
-    path("api/docs/", SpectacularAPIView.as_view(), name="docs"),
+    path("api/docs/schema", SpectacularAPIView.as_view(), name="docs"),
     path(
-        "api/docs/swagger-ui/",
+        "api/docs/",
         SpectacularSwaggerView.as_view(url_name="docs"),
         name="swagger-ui",
     ),
